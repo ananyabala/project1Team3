@@ -1,61 +1,26 @@
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCgKPddkgj3RhPS1B2Hw_DihvXgZBbxxiE",
+    authDomain: "project1team3-39b4f.firebaseapp.com",
+    databaseURL: "https://project1team3-39b4f.firebaseio.com",
+    projectId: "project1team3-39b4f",
+    storageBucket: "project1team3-39b4f.appspot.com",
+    messagingSenderId: "74591335518"
+  };
+  firebase.initializeApp(config);
 
-    $('.pullChevron').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        
-    });
+  // API Integration
+  var searchTerm="tofu";
+  var appID = "b0ffc540";
+  var appKey= "67974e2a56c2eb39530f556ed3b6153e";
+  var queryURL ="https://api.edamam.com/search?q="+searchTerm+"&app_id=$"+appID+"&app_key=$"+appKey+"&from=0&to=3&calories=591-722&health=alcohol-free"
 
-    $(document).click(function(e) {
-        var sidebar = $("#sidebar, .pullChevron");
-        console.log(sidebar);
-        if (!sidebar.is(e.target) && sidebar.has(e.target).length === 0) {//length of sidebar>pullchevron is greater than 0, a window object//
-          sidebar.removeClass('active')
-        }
-    });
-
-
-
-    $(document).ready(function () {
-
-        $('#list-items').html(localStorage.getItem('listItems'));
-          
-        $('.add-items').submit(function(event) 
-        {
-          event.preventDefault();
-      
-          var item = $('#todo-list-item').val();
-      
-          if(item) 
-          {
-            $('#list-items').append("<li><input class='checkbox' type='checkbox'/>" + item + "<a class='remove'>x</a><hr></li>");
-            
-            localStorage.setItem('listItems', $('#list-items').html());
-            
-            $('#todo-list-item').val("");
-          }
-          
-        });
-      
-        $(document).on('change', '.checkbox', function() 
-        {
-          if($(this).attr('checked')) 
-          {
-            $(this).removeAttr('checked');
-          } 
-          else 
-          {
-            $(this).attr('checked', 'checked');
-          }
-      
-          $(this).parent().toggleClass('completed');
-          
-          localStorage.setItem('listItems', $('#list-items').html());
-        });
-      
-        $(document).on('click', '.remove', function() 
-        {
-          $(this).parent().remove();
-          
-          localStorage.setItem('listItems', $('#list-items').html());
-        });
-      
-      });
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  })
+  .then(function(response){
+    console.log(queryURL);
+    console.log(response);
+  }
+  )

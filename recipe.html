@@ -6,71 +6,125 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Poppins|Josefin+Sans:700" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Recipe Page</title>
 </head>
 
 <body>
-    <div class="logoSpace">
-        <div class="row" id="logoSpace">
-            <div class="col-md-12">
-                <h1>this is where the logo will go</h1>
-            </div>
+    <!-- Logo -->
 
+    <div class="container" id="logoDiv">
+        <p>BasketCase</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="container" id="searchBar">
+        <button type="button" class="btn btn-default btn-lg" id="searchIcon">
+                <span class="glyphicons glyphicons-search"></span>
+        </button>
+        <input type="text" placeholder="Search away!" id="searchInput">
+
+
+    </div>
+
+    <!-- Navbar -->
+
+    <nav id="sidebar" class="toggled">
+
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <h3>BasketCase</h3>
+            <!-- <i class="fas fa-shopping-basket"></i> -->
 
         </div>
+
+
+        <!-- Sidebar Links -->
+        <ul class="menuItems">
+            <li>
+                <a href="#" data-toggle="collapse" aria-expanded="false">
+                    <i class="fas fa-utensils"></i> Recipes</a>
+
+            </li>
+            <li>
+                <a href="#" data-toggle="collapse" aria-expanded="false">
+                    <i class="far fa-lightbulb"></i> Get Inspired</a>
+
+            </li>
+
+            <li>
+                <a href="#" data-toggle="collapse" aria-expanded="false">
+                    <i class="fas fa-birthday-cake"></i> TBD</a>
+
+            </li>
+        </ul>
+
+
+    </nav>
+
+    <div id="toggler">
+        <i class="fas fa-bars pullChevron"></i>
     </div>
+
+
+    <!-- End of Nav Bar -->
+
     <br>
     <div class="container" id="recipeGrid">
         <div class="row">
             <div class="col-md-4" id="textCenter">
-                <div class="card" >
+                <div class="card">
                     <div style="height: 250px; width: auto; background-color: yellow; overflow: hidden;">
-                        <img style=" display: block;margin: 0 auto;" class="card-img-top" src="./assets/images/picture1.jpg"
-                            alt="Card image cap">
+                        <img style=" display: block;margin: 0 auto;" class="card-img-top" src="./assets/images/picture1.jpg" alt="Card image cap">
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body" id="cardBody">
                         <h5 class="card-title">1-POT YELLOW CHICKPEA CAULIFLOWER CURRY</h5>
                         <p class="card-text">So I got to work and kept things simple. This dish requires just 30 minutes and 1 pot to create.
-                            </p>
-                        <a href="#" class="btn btn-primary">Let's Cook it!</a>
+                        </p>
+
                     </div>
                 </div>
             </div>
             <div class="col-md-4" id="textCenter">
-                    <div class="card" >
-                            <div style="height: 250px; width: auto; background-color: yellow; overflow: hidden;">
-                                <img style=" display: block;margin: 0 auto;" class="card-img-top" src="./assets/images/picture2.jpg"
-                                    alt="Card image cap">
-                            </div>
-        
-                            <div class="card-body">
-                                <h5 class="card-title">1-POT YELLOW CHICKPEA CAULIFLOWER CURRY</h5>
-                                <p class="card-text">So I got to work and kept things simple. This dish requires just 30 minutes and 1 pot to create.
-                                    </p>
-                                <a href="#" class="btn btn-primary">Let's Cook it!</a>
-                            </div>
-                        </div>
+                <div class="card">
+                    <div style="height: 250px; width: auto; background-color: yellow; overflow: hidden;">
+                        <img style=" display: block;margin: 0 auto;" class="card-img-top" src="./assets/images/picture2.jpg" alt="Card image cap">
+                    </div>
+
+                    <div class="card-body" id="cardBody">
+                        <h5 class="card-title">1-POT YELLOW CHICKPEA CAULIFLOWER CURRY</h5>
+                        <p class="card-text">So I got to work and kept things simple. This dish requires just 30 minutes and 1 pot to create.
+                        </p>
+
+                    </div>
+                </div>
             </div>
             <div class="col-md-4" id="textCenter">
-                    <div class="card">
-                            <div style="height: 250px; width: auto; background-color: yellow; overflow: hidden;">
-                                <img style=" display: block;margin: 0 auto;" class="card-img-top" src="./assets/images/picture3.jpg"
-                                    alt="Card image cap">
-                            </div>
-        
-                            <div class="card-body">
-                                <h5 class="card-title">1-POT YELLOW CHICKPEA CAULIFLOWER CURRY</h5>
-                                <p class="card-text">So I got to work and kept things simple. This dish requires just 30 minutes and 1 pot to create.
-                                    </p>
-                                <a href="#" class="btn btn-primary">Let's Cook it!</a>
-                            </div>
-                        </div>
+                <div class="card">
+                    <div style="height: 250px; width: auto; background-color: yellow; overflow: hidden;">
+                        <img style=" display: block;margin: 0 auto;" class="card-img-top" src="./assets/images/picture3.jpg" alt="Card image cap">
+                    </div>
+
+                    <div class="card-body" id="cardBody">
+                        <h5 class="card-title">1-POT YELLOW CHICKPEA CAULIFLOWER CURRY</h5>
+                        <p class="card-text">So I got to work and kept things simple. This dish requires just 30 minutes and 1 pot to create.
+                        </p>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="./assets/javascript/app.js"></script>
 
 </body>
 
