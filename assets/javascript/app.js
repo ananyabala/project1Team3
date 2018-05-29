@@ -10,17 +10,17 @@
   firebase.initializeApp(config);
 
   // API Integration
-  var searchTerm="tofu";
-  var appID = "b0ffc540";
-  var appKey= "67974e2a56c2eb39530f556ed3b6153e";
-  var queryURL ="https://api.edamam.com/search?q="+searchTerm+"&app_id=$"+appID+"&app_key=$"+appKey+"&from=0&to=3&calories=591-722&health=alcohol-free"
+  // var searchTerm="tofu";
+  // var appID = "b0ffc540";
+
+  var queryURL = "https://api.edamam.com/search?q=chicken&app_id=540719b1&app_key=2d98d59eaf4976edb2d1abd92540e167"
+
 
   $.ajax({
     url: queryURL,
     method: "GET",
   })
   .then(function(response){
-    console.log(queryURL);
     console.log(response);
   }
   )
