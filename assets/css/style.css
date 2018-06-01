@@ -15,14 +15,16 @@ html{
     border-style: none;
     font-family: 'Poppins', sans-serif;
     background-color: lightgray;
-    border-radius: 0.15em;
+    opacity: 0.2;
+    border-radius: 2em;
     padding: 10px;
     overflow: hidden;
     display: flex;
-    height: auto;
+    height: 3.5em;
 }
 #searchIcon,#searchInput{
-    padding:0.3125em;
+    padding-top:0.3125em;
+    padding-bottom:0.3125em;
     border-style: none;
     font-family: 'Poppins', sans-serif;
     background-color: lightgray;
@@ -31,6 +33,36 @@ html{
 #searchInput{
     width: 100%;
 }
+#searchIcon{
+    margin-right: 1em;
+    margin-left: 1em;
+    width: 2em;
+    height: auto;
+}
+
+.main{
+    max-height: 25em;
+    max-width: auto; 
+    overflow: hidden;
+    margin: 1em;
+}
+    
+
+img {
+    display: block;
+   
+}
+
+h5{
+    padding-top: 0.5em;
+    margin: 0 auto;
+    text-align: center;
+}
+/* 
+.grid{
+    display: block;
+    margin: 0 auto;
+} */
 
 
 
