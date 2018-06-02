@@ -13,14 +13,14 @@ firebase.initializeApp(config);
 // Get console.log to work
 // Create a new row -- getting the things to just add, and then seeing
 
-
 $("button").on("click", function () {
 
-//  Emptying out the container
+
+  //  Emptying out the container
   $('.grid').empty();
 
   // Storing what is typed into the search bar
-  var searchTerm = $("#searchInput").val();
+  var searchTerm = $("#searchForm").val();
   console.log(searchTerm);
   // Consturcting the query URL for the API
   var queryURL = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=b0ffc540&app_key=a41b1a4d8560dbb27bbf0ef650ec9bf0";
@@ -81,6 +81,8 @@ $("button").on("click", function () {
   // $("#imageHere").append(recipeDiv);
 
 });
+
+
 
 
 

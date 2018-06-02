@@ -52,8 +52,12 @@ body{
     border-radius: 0.15em;
 }
 
-#searchInput {
-    width: 100%;
+#searchForm, #searchButton {
+    padding: 0;
+    border-style: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: lightgray;
+
 }
 
 /* #searchIcon{
@@ -64,9 +68,12 @@ body{
 } */
 
 #searchPNG {
+    height: 50px;
     width: auto;
-    height: 3em;
+    padding: 0;
+    /* margin-right: 10px; */
 }
+
 
 .main {
     display: inline-block;
@@ -78,11 +85,17 @@ img {
     width: 100%;
     overflow: hidden;
     padding: 1em;
+    border-radius: 1em;
 }
 
 h5 {
     margin: 0 auto;
     text-align: center;
+    font-size: 25;
+    font-weight: bold;
+    font-family: monospace;
+    padding: 1em;
+    color: goldenrod;
 }
 
 .grid {
