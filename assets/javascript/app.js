@@ -47,7 +47,7 @@ $("button").on("click", function () {
       recipeDiv.append(recipeBodyDiv);
 
       // Title of Recipe
-      var recipeTitle = $("<h5>").text(response.hits[i].recipe.label);
+      var recipeTitle = $("<h5>").text(response.hits[i].recipe.label).attr("class","title").attr("data",response.hits[i].recipe.url);;
       recipeBodyDiv.append(recipeTitle);
 
       // console.log(recipeDiv);
@@ -60,6 +60,11 @@ $("button").on("click", function () {
     // Takes you to the recipe url webpage
 
     $(document).on('click','.image', function(){
+      window.open($(this).attr('data'));
+      console.log(this);
+    });
+
+    $(document).on('click','.title', function(){
       window.open($(this).attr('data'));
       console.log(this);
     })
