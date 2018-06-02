@@ -16,6 +16,9 @@ firebase.initializeApp(config);
 
 $("button").on("click", function () {
 
+//  Emptying out the container
+  $('.grid').empty();
+
   // Storing what is typed into the search bar
   var searchTerm = $("#searchInput").val();
   console.log(searchTerm);
