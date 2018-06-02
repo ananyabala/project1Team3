@@ -1,5 +1,16 @@
-html{
+* {
+box-sizing: border-box;
+background-size: cover;
+}
+html,body{
     width:100%;
+    background-image: url('../images/background.jpg');
+    
+}
+
+
+#backgroundImage{
+    max-width: 1em;
 }
 
 #textCenter{
@@ -33,23 +44,33 @@ html{
 #searchInput{
     width: 100%;
 }
-#searchIcon{
+/* #searchIcon{
     margin-right: 1em;
     margin-left: 1em;
-    width: 2em;
+    width: 0.2em;
     height: auto;
+} */
+#searchPNG{
+    width: auto;
+    height: 3em;
+    
+
 }
 
 .main{
-    max-height: 25em;
-    max-width: auto; 
+    max-height: auto;
+    max-width: 25em; 
     overflow: hidden;
     margin: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
 }
     
 
 img {
     display: block;
+    width: 100%;
+    overflow: hidden;
    
 }
 
@@ -58,11 +79,11 @@ h5{
     margin: 0 auto;
     text-align: center;
 }
-/* 
+
 .grid{
-    display: block;
-    margin: 0 auto;
-} */
+    background-color: azure;
+    border-radius: 2em;
+}
 
 
 

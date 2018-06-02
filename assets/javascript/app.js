@@ -16,23 +16,26 @@ firebase.initializeApp(config);
 
 $("button").on("click", function () {
 
+  // Storing what is typed into the search bar
   var searchTerm = $("#searchInput").val();
   console.log(searchTerm);
-
+// Consturcting the query URL for the API
   var queryURL = "https://api.edamam.com/search?q=" + searchTerm + "&app_id=b0ffc540&app_key=a41b1a4d8560dbb27bbf0ef650ec9bf0";
   console.log(queryURL);
-
+// API call
   $.ajax({
     url: queryURL,
     method: "GET",
   }).then(function (response) {
+    // For loop going through for 9 recipes
     for (var i = 0; i < 10; i++) {
       console.log(response);
+// Getting the image from the API
+      console.log(response.hits[i].recipe.url);
 
-      console.log(response.hits[i].recipe.image);
 
       // Creating the big square for the grid (main)
-      var recipeDiv = $("<div>").attr("class", "card");
+      var recipeDiv = $("<div>").attr("class", "card").attr("class", "main");
             
       // Image
       var recipeImage = $('<img src="' + response.hits[i].recipe.image + '" >');
@@ -48,6 +51,11 @@ $("button").on("click", function () {
 
       // console.log(recipeDiv);
       $(".grid").append(recipeDiv);
+
+      $(".main").on('click', function(){
+        window.location = response.hits[i].recipe.url;
+        console.log(window.location);    
+   });
     }
 
   });
