@@ -4,6 +4,10 @@
     
 }
 
+#basket{
+    padding: 0;
+}
+
 body {
     width: 100%;
     background-color:#ffffff;
@@ -11,6 +15,8 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+
 
 body{
     margin: 0;
@@ -79,13 +85,16 @@ body{
     display: inline-block;
     width: 33.3%;
     justify-content: center;
+    
 }
 
 img {
     width: 100%;
     overflow: hidden;
-    padding: 1em;
-    border-radius: 1em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    padding-top: 1em;
+    
 }
 
 h5 {
@@ -94,13 +103,15 @@ h5 {
     font-size: 25;
     font-weight: bold;
     font-family: monospace;
-    padding: 1em;
+    padding: 0.5em;
     color: goldenrod;
+    cursor: pointer;
 }
 
 .grid {
     background-color: whitesmoke;
     border-radius: 2em;
+    
 }
 
 
@@ -227,3 +238,27 @@ a, a:hover, a:focus {
     padding-top: 15px;
     color: black;
 }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .m-scene {
+      /** Basic styles for an animated element */
+    .scene_element {
+      animation-duration: 0.25s;
+      transition-timing-function: ease-in;
+      animation-fill-mode: both;
+  
+    }
+  
+    /** An element that fades in */
+    .scene_element--fadein {
+      animation-name: fadeIn;
+    }
